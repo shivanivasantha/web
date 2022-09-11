@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8th lab</title>
+</head>
+<body>
+    <p id="p1" onmouseover="move(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo aut perferendis corporis dolor 
+officia eos natus nihil soluta velit maiores minima molestias, magni fuga, ex saepe obcaecati eligendi suscipit.</p>
+<p id="p2" onmouseover="move(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quo corrupti rem a vel maxime facilis, ullam deleniti reiciendis. In molestias neque amet, perspiciatis modi similique quam doloremque totam quaerat?</p>
+<p id="p3" onmouseover="move(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse veniam incidunt, eveniet assumenda officia perferendis atque magnam est eius dolores velit accusamus cumque perspiciatis eum, quaerat iusto maiores, tempore nesciunt!</p>
+
+<style>
+    #p1{
+        background-color: blueviolet;
+        top: 80px;
+        left: 80px;
+        position: absolute;
+        z-index: 40;
+    }
+    #p2{
+        background-color: red;
+        top: 100px;
+        left: 100px;
+        position: absolute;
+        z-index: 40;
+    }
+    #p3{
+        background-color: yellow;
+        top: 120px;
+        left: 120px;
+        position: absolute;
+        z-index: 40;
+    }
+</style>
+<script>
+    function move(a){
+        var pb=document.getElementsByTagName("p");
+        for(i=0;i<pb.length;i++){
+        pb[i].style.zIndex=i+1;
+        }
+        a.style.zIndex=100;
+    }
+</script>
+</body>
+</html>
