@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9th lab</title>
+    <style>
+        h2{
+            text-transform: uppercase;
+        }
+        label{
+            margin: 20px;
+            display: block;
+        }
+        .n{
+            background-color: yellow;
+            border-radius: 4px;
+            border: 2px solid green;
+        }
+    </style>
+    <script> 
+        
+    function add(){
+        val=document.getElementById("res").value=(parseInt(document.getElementById("sn").value)+parseInt(document.getElementById("fn").value));
+    }
+    function sub(){
+        val=document.getElementById("res").value=(parseInt(document.getElementById("sn").value)-parseInt(document.getElementById("fn").value));
+    }
+    function mul(){
+        val=document.getElementById("res").value=(parseInt(document.getElementById("sn").value)*parseInt(document.getElementById("fn").value));
+    }
+    function div(){
+        if((document.getElementById("sn").value)!=0){
+        val=document.getElementById("res").value=(parseInt(document.getElementById("sn").value)/parseInt(document.getElementById("fn").value));
+    }
+    else{
+        document.getElementById("d").innnerHTML="value greater than 0";
+    }
+}
+        </script>
+    
+</head>
+<body>
+   <form action="">
+   <h2>simple calci</h2>
+   <label for="n">number 1<input type="number" id="sn" name="fn" class="n"></label>
+   <label for="n">number 2<input type="number" id="fn" name="sn" class="n"></label>
+   <label for="n">result<input type="text" id="res" name="res" class="n" disabled></label>
+   <input type="button" value="add" onclick="add();">
+   <input type="button" value="sub" onclick="sub();">
+   <input type="button" value="mul" onclick="mul();">
+   <input type="button" value="divi" onclick="div();">
+   <input type="reset" value="clear">
+   <div id="d"></div>
+
+  </form>
+</body>
+
+</html>
